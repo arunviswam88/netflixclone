@@ -1,0 +1,15 @@
+<header class="bg-main top-0 sticky bg-gray-900 h-12 flex justify-between items-center px-10">
+ <div class="flex gap-5">
+    <img width="110" src="assets/logo.png" alt="">
+    <ul class="flex  font-bold items-center">
+        @for (item of newList; track $index) {
+            <li class="pr-3 text-neutral-50 cursor-pointer text-sm hover:text-gray-400 transition-[1s]">{{item}}</li>
+        }
+    </ul>
+ </div>
+ <div class="text-white flex gap-5">
+    <a href="/"><span><strong class="pr-2">Welcome</strong>{{userName()}}</span></a>
+    <img class="rounded-full" width="30" src="{{userProfile()}}" alt="user-image">
+    <a href="/"><span><strong class="pr-2 hover:text-gray-400 transition-[1s]">Signout</strong></span></a>
+ </div>
+</header>
